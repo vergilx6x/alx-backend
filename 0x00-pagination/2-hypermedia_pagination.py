@@ -48,7 +48,7 @@ class Server:
         """Returns a dictionary containing a page information"""
         page_data = self.get_page(page, page_size)
         start, end = index_range(page, page_size)
-        total_pages = math.ceil(len(self.dataset / page_size))
+        total_pages = math.ceil(len(self.__dataset) / page_size)
         page_information = {
             'page_size': len(page_data),
             'page': page,
