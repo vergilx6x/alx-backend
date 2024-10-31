@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """A class that sets, gets items from a data dictionary,
 using the LFU algorithm with LRU tie-breaking"""
 
