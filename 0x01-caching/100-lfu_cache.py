@@ -11,11 +11,15 @@ class LFUCache(BaseCaching):
        with LRU tie-breaking for items with the same frequency."""
 
     def __init__(self):
+        """Initializes the cache.
+        """
         super().__init__()
         self.cache_data = OrderedDict()
         self.hit_counts = {}
 
     def put(self, key, item):
+        """Adds an item in the cache.
+        """
         if key is None or item is None:
             return
 
@@ -43,6 +47,8 @@ class LFUCache(BaseCaching):
             self.hit_counts[key] = 1
 
     def get(self, key):
+        """Retrieves an item by key.
+        """
         if key is None or key not in self.cache_data:
             return None
 
